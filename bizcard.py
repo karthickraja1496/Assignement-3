@@ -231,7 +231,7 @@ if selected == "View & Modify":
             st.write("## Proceed to delete this card?")
 
             if st.button("Yes Delete Business Card"):
-                mycursor.execute(f"DELETE FROM business_card WHERE card_holder='{selected_card}'")
+                mycursor.execute(f"DELETE FROM business_card WHERE Name='{selected_card}'")
                 mydb.commit()
                 st.success("Business card information deleted from database.")
     except:
